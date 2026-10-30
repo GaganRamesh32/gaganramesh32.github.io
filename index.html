@@ -85,10 +85,11 @@ header .lede { grid-column: 1 / -1; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; transform: scale(1.45); transform-origin: 50% 21%; display: block; }
 .avatar span { position: absolute; inset: 0; display: grid; place-items: center; font-size: 2.5rem; font-weight: 600; color: var(--accent); }
 .avatar.has-photo span { display: none; }
-@media (max-width: 560px) { header { grid-template-columns: minmax(0, 1fr); } .avatar { width: 112px; height: 112px; } .avatar span { font-size: 2rem; } }
+@media (max-width: 560px) { header { grid-template-columns: minmax(0, 1fr); } #email { flex-basis: 100%; } .avatar { width: 112px; height: 112px; } .avatar span { font-size: 2rem; } }
 h1 { font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; }
 .role { font-size: 1.125rem; color: var(--accent); font-weight: 500; text-wrap: balance; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--muted); align-items: center; }
+.contact { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .copy, .btn { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--accent); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; cursor: pointer; text-decoration: none; }
 .copy:hover, .btn:hover { background: var(--accent-soft); }
 .lede { max-width: 66ch; font-size: 1.0625rem; }
@@ -185,9 +186,12 @@ footer { border-top: 1px solid var(--line); padding-top: 20px; display: flex; fl
     <div class="meta">
       <span>Bengaluru, India</span>
       <span>18+ years in quality engineering</span>
-      <span id="email">gaganramesh@gmail.com</span>
-      <button class="copy" id="copy-email" type="button">Copy email</button>
-      <a class="btn" href="https://github.com/GaganRamesh32">GitHub</a>
+      <span class="contact">
+        <span id="email">gaganramesh@gmail.com</span>
+        <button class="copy" id="copy-email" type="button">Copy email</button>
+        <a class="btn" href="https://github.com/GaganRamesh32">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/gaganramesh32">LinkedIn</a>
+      </span>
     </div>
     </div>
     <p class="lede">I lead automation and quality engineering for banking, financial services and insurance programmes, and I am building evaluation and regression testing for LLM, RAG and agent systems. Most of my career was spent on regulated, high-risk releases for global clients.</p>
@@ -400,7 +404,7 @@ footer { border-top: 1px solid var(--line); padding-top: 20px; display: flex; fl
 
   <footer>
     <span>Gagan Ramesh, Bengaluru</span>
-    <a href="https://github.com/GaganRamesh32">github.com/GaganRamesh32</a>
+    <span class="row"><a href="https://github.com/GaganRamesh32">github.com/GaganRamesh32</a><a href="https://www.linkedin.com/in/gaganramesh32">linkedin.com/in/gaganramesh32</a></span>
   </footer>
 </div>
 
